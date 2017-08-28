@@ -42,7 +42,7 @@ CREATE TABLE Laboratorio(
 CREATE TABLE Medicamento (
 	Cod_Mdcmt INTEGER NOT NULL,
   	CNPJ_Lab CHAR(14) NOT NULL,	  
-	Composicao_cod_comp NOT NULL, 
+	Composicao_cod_comp INTEGER NOT NULL, 
 	Nome_Gen_Mdcmt VARCHAR(45),	
 	Prescricao_Mdcmt CHAR(1),
   	CONSTRAINT Pk_Medicamento PRIMARY KEY(Cod_Mdcmt), -- RESTRIÇÃO DE CHAVE PRIMARIA
