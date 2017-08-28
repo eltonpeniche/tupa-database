@@ -138,3 +138,85 @@ CREATE TABLE Lote (
 ALTER TABLE Lote ADD CONSTRAINT fk_Lote FOREIGN KEY (FHM_Farmacia_CNPJ_Farm, FHM_MDCMT_Cod_medcmt) 
 REFERENCES Farmacia_has_Medicamento (Farmacia_CNPJ_Farm, Medicamento_Cod_Mdcmt); 
 
+
+-- inserindo dados na tabela Substancia
+INSERT INTO Substancia VALUES ( 01, 'Cloreto de sódio');
+INSERT INTO Substancia VALUES ( 02, 'cloridrato de nafazolina');
+INSERT INTO Substancia VALUES ( 03, 'Água destilada');
+INSERT INTO Substancia VALUES ( 04, 'Excipientes');
+INSERT INTO Substancia VALUES ( 05, 'Cloreto de benzalcônio');
+INSERT INTO Substancia VALUES ( 06, 'Corfenadrina base');
+INSERT INTO Substancia VALUES ( 07, 'citrato de orfenadrina');
+INSERT INTO Substancia VALUES ( 08, 'Ccafeína anidra');
+
+-- inserindo dados na tabela Composição
+INSERT INTO Composicao VALUES( 01, 01);
+INSERT INTO Composicao VALUES( 01, 02);
+INSERT INTO Composicao VALUES( 01, 03);
+INSERT INTO Composicao VALUES( 01, 04);
+INSERT INTO Composicao VALUES( 01, 05);
+
+-- inserindo dados na tabela Composição_has_substancia
+INSERT INTO Composicao_has_substancia VALUES( 01, 01, 01, 01);
+INSERT INTO Composicao_has_substancia VALUES( 01, 02, 01, 05);
+INSERT INTO Composicao_has_substancia VALUES( 01, 03, 01, 01);
+INSERT INTO Composicao_has_substancia VALUES( 01, 01, 02, 01);
+INSERT INTO Composicao_has_substancia VALUES( 01, 02, 04, 01);
+
+-- inserindo dados na tabela Laboratorio
+INSERT INTO Laboratorio VALUES('29785870000103', 'Rio de Janeiro, 751', 'Neo Química');
+INSERT INTO Laboratorio VALUES('56191649753600', 'Rua Onze, 637', 'Richet');
+INSERT INTO Laboratorio VALUES('78320827661082', 'Rua Quatorze, 452', 'Albert Einstein');
+INSERT INTO Laboratorio VALUES('31300975801423', 'Rua Bahia, 360	', 'CEDAP');
+INSERT INTO Laboratorio VALUES('93034625705331', 'Rua Castro Alves, 331	', 'Dasa');
+
+-- inserindo dados na tabela Medicamento
+INSERT INTO Medicamento VALUES(01, 01, 29785870000103, 01, 'Neosoro', 1);
+INSERT INTO Medicamento VALUES(02, 02, 56191649753600, 01, 'Dorflex', 0);
+INSERT INTO Medicamento VALUES(03, 03, 78320827661082, 01, 'Losartana', 0);
+INSERT INTO Medicamento VALUES(04, 04, 31300975801423, 01, 'Sinvastatina', 1);
+INSERT INTO Medicamento VALUES(05, 05, 93034625705331, 01, 'Neosaldina', 0);
+
+-- inserindo dados na tabela Tipo_Medicamento
+INSERT INTO Tipo_Medicamento VALUES(01, 01, 'Lorem ipsum dolor sit amet.');
+INSERT INTO Tipo_Medicamento VALUES(02, 02, 'eque porro quisquam est qui ');
+INSERT INTO Tipo_Medicamento VALUES(03, 03, 'dolorem ipsum quia dolor sit amet');
+INSERT INTO Tipo_Medicamento VALUES(04, 04, 'Vestibulum scelerisque auctor');
+INSERT INTO Tipo_Medicamento VALUES(05, 05, 'Nunc quis dapibus augue. Aenean ');
+
+-- inserindo dados na tabela Via_Medicamento
+INSERT INTO Via_Medicamento VALUES(01, 01, 'Lorem ipsum dolor sit amet.');
+INSERT INTO Via_Medicamento VALUES(02, 02, 'eque porro quisquam est qui ');
+INSERT INTO Via_Medicamento VALUES(03, 03, 'dolorem ipsum quia dolor sit amet');
+INSERT INTO Via_Medicamento VALUES(04, 04, 'Vestibulum scelerisque auctor');
+INSERT INTO Via_Medicamento VALUES(05, 05, 'Nunc quis dapibus augue. Aenean ');
+
+-- inserindo dados na tabela Farmacia
+INSERT INTO Farmacia VALUES('97500447696074', 'Raia Drogasil', 'Raia Drogasil S.A.');
+INSERT INTO Farmacia VALUES('16673322254791', 'Pague Menos', 'EMPREENDIMENTOS PAGUE MENOS S.A');
+INSERT INTO Farmacia VALUES('32825037511065', 'Pacheco', 'Drogarias Pacheco S/A');
+INSERT INTO Farmacia VALUES('74598584417253', 'Big Ben', 'Drogarias Big Ben S/A');
+INSERT INTO Farmacia VALUES('80177136650308', 'Panvel	Dimed', 'S/A Distribuidora de Medicamentos');
+
+-- inserindo dados na tabela Unidade
+INSERT INTO Unidade VALUES(01, '97500447696074', '08h as 18hs', 'Rio de Janeiro, 321', 	'879376466');
+INSERT INTO Unidade VALUES(02, '16673322254791', '09h as 20hs', 'Rua Onze, 637 ',	 '927960038');
+INSERT INTO Unidade VALUES(03, '32825037511065', '07h as 19hs', 'Rua Quatorze, 452', 	'705103525');
+INSERT INTO Unidade VALUES(04, '74598584417253', '09h as 16hs', 'Rua Bahia, 360', 	'758109881');
+INSERT INTO Unidade VALUES(05, '80177136650308', '08h as 20hs', 'Rua Castro Alves, 331', '912731777');
+
+-- inserindo dados na tabela Farmacia_has_Medicamento
+INSERT INTO Farmacia_has_Medicamento VALUES(01, '97500447696074', 85);
+INSERT INTO Farmacia_has_Medicamento VALUES(02, '16673322254791', 95);
+INSERT INTO Farmacia_has_Medicamento VALUES(03, '32825037511065', 11);
+INSERT INTO Farmacia_has_Medicamento VALUES(04, '74598584417253', 22);
+INSERT INTO Farmacia_has_Medicamento VALUES(05, '80177136650308', 90);
+
+-- inserindo dados na tabela Lote
+INSERT INTO Lote VALUES(01, '97500447696074', 01 ,' 01/01/2015', ' 01/01/2000');
+INSERT INTO Lote VALUES(02, '16673322254791', 02 ,' 01/02/2015 ', ' 01/02/2000');
+INSERT INTO Lote VALUES(03, '32825037511065', 03 ,' 01/03/2015', '01/03/2000 ');
+INSERT INTO Lote VALUES(04, '74598584417253', 04 ,' 01/04/2015 ','01/04/2000');
+INSERT INTO Lote VALUES(05, '80177136650308', 05 ,' 01/05/2015  ','01/05/2000 ');
+
+
